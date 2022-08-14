@@ -42,7 +42,7 @@ function CardComponent({ index, card, render, setRender }) {
             })
     }
     return (
-        <div key={index} className="contaner-cards">
+        <div key={index} className="contaner-cards" >
             <div className="card-header">
                 <div className="title-card">{card.title}</div>
                 <div

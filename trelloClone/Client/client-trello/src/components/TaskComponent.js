@@ -15,8 +15,14 @@ function TaskComponent({ index, task, setRender, render }) {
                 if (res.status === 200) setRender(!render)
             })
     }
+    const handleDragStart = () => {
+        console.log('i m draging...');
+    }
     return (
-        <div key={index} className="task-body">
+        <div
+            key={index} className="task-body"
+            draggable
+            onDragStart={handleDragStart}>
             <div className="task-title">{task.title}</div>
             <div
                 onClick={() => handleDeleteTask()}
