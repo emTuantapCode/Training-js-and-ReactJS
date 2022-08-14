@@ -52,6 +52,7 @@ html {
     border-radius: 8px;
     min-width: 260px;
     margin: 0 12px;
+    height: fit-content !important;
 }
 .board-body,
 .card-header,

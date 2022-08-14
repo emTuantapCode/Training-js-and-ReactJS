@@ -1,10 +1,15 @@
 const mongoose = require('mongoose')
 
-connect().catch(err => console.log(err))
-
 async function connect() {
-    await mongoose.connect('mongodb://localhost:27017/Trello-dev')
-    console.log('connect success');
+    try {
+        await mongoose.connect('mongodb://localhost:27017/Trello-dev', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        console.log('success connected')
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 module.exports = { connect }
